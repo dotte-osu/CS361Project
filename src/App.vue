@@ -15,7 +15,7 @@
         <b-navbar-nav class="ml-auto">
           <b-nav-item-dropdown text="Locations" right>
             <b-dropdown-item href="#"><router-link class="link" to="/location/Columbia River Gorge">Columbia River Gorge</router-link></b-dropdown-item>
-            <b-dropdown-item href="#"><router-link class="link" to="/location/Crater Lake">Crater Lake</router-link></b-dropdown-item>
+            <b-dropdown-item href="#"><router-link class="link" to="/location/Crater Lake"></router-link>Crater Lake</b-dropdown-item>
             <b-dropdown-item href="#"><router-link class="link" to="/location/Painted Hills">Painted Hills</router-link></b-dropdown-item>
             <b-dropdown-item href="#"><router-link class="link" to="/location/Oregon Coast">Oregon Coast</router-link></b-dropdown-item>
             <b-dropdown-item href="#"><router-link class="link" to="/location/Smith Rock">Smith Rock</router-link></b-dropdown-item>
