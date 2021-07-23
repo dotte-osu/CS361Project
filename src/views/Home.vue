@@ -3,12 +3,11 @@
     <h1 class ="title">7 Wonders Of Oregon</h1>
     <div class=" containers">
         <div>
-            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed laoreet eros. Maecenas non semper
-                neque.
-                Fusce lobortis urna volutpat ligula consequat gravida. Suspendisse auctor dui eu libero blandit gravida.
-                Morbi aliquam nunc nisi, et posuere nisl sollicitudin ac.
-                Vestibulum congue nisi ac quam imperdiet, non malesuada ante sodales. Cras ultrices quis augue vitae
-                ultricies.
+            <p class="text">
+                The 7 Wonders of Oregon is the seven beautiful natural wonders in Oregon. 
+                There are the Oregon Coast, Mt. Hood, the Columbia River Gorge, Crater Lake, the Painted Hills, the Wallowas and Smith Rock. 
+                Even though they are all in Oregon, each location has different landscaping and breathtaking view. 
+                While the ancient world held seven wonders to share, Oregon offers beuatiful natural wonders that you can easily reached in a single road trip.
             </p>
         </div>
         
