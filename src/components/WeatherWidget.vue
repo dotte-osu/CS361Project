@@ -10,7 +10,7 @@
     </div>
 </template>
 <script>
-
+import Keys from '@/../data.json'
 export default {
     devServer: {
         proxy: 'http://localhost:8080',
@@ -37,7 +37,7 @@ export default {
             var self = this
             var cityName = "Terrebonne"
             var stateName = "OR"
-            var url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "," +stateName+",usa&appid=b5b195ce8a512e73f29168a6a055eed9"
+            var url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "," +stateName+ "&appid=" + Keys.data[0].APY_KEY
 
             fetch(url)
                         .then(function (resp) { return resp.json() }) // Convert data to json
