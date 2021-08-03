@@ -16,17 +16,18 @@
         </div>
 
         <b-dropdown id="dropdown-1" text="Check another location!" class="m-md-2" variant="success" size="lg">
-                        <b-dropdown-item>Columbia River Gorge</b-dropdown-item>
-                        <b-dropdown-item>Crater Lake</b-dropdown-item>
-                        <b-dropdown-item>Painted Hills</b-dropdown-item>
-                        <b-dropdown-item>Oregon Coast</b-dropdown-item>
-                        <b-dropdown-item>Smith Rock</b-dropdown-item>
-                        <b-dropdown-item>The Wallowas</b-dropdown-item>
-                        <b-dropdown-item>Mt. Hood</b-dropdown-item>
-                        <b-dropdown-divider></b-dropdown-divider>
+            <b-dropdown-item @click="reloadPage('Columbia River Gorge')">Columbia River Gorge</b-dropdown-item>
+            <b-dropdown-item @click="reloadPage('Crater Lake')">Crater Lake</b-dropdown-item>
+            <b-dropdown-item @click="reloadPage('Painted Hills')">Painted Hills</b-dropdown-item>
+            <b-dropdown-item @click="reloadPage('Oregon Coast')">Oregon Coast</b-dropdown-item>
+            <b-dropdown-item @click="reloadPage('Smith Rock')">Smith Rock</b-dropdown-item>
+            <b-dropdown-item @click="reloadPage('The Wallowas')">The Wallowas</b-dropdown-item>
+            <b-dropdown-item @click="reloadPage('Mt. Hood')">Mt. Hood</b-dropdown-item>
+            <b-dropdown-divider></b-dropdown-divider>
         </b-dropdown>
 
-        <b-button variant="success" size="lg">Compare with another location!</b-button>
+
+        <b-button variant="success" size="lg"><router-link class="link" to="/compare">Compare with another location!</router-link></b-button>
     </div>
 </template>
 
@@ -42,9 +43,14 @@ export default {
         MapWidget
     },
     data(){
-        
         return{
-        name: this.$route.params.locname
+            name: this.$route.params.locname
+        }
+    },
+    methods: {
+    reloadPage(locName) {
+        this.$router.push(locName) 
+        window.location.reload();
         }
     }
 }
@@ -68,5 +74,10 @@ export default {
     margin: auto;
     padding: 10px;
     height: 100%;
+}
+.link{
+    color: white;
+    outline: none;
+    text-decoration: none;
 }
 </style>

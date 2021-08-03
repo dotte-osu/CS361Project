@@ -14,13 +14,13 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-nav-item-dropdown text="Locations" right>
-            <b-dropdown-item href="#"><router-link class="link" to="/location/Columbia River Gorge">Columbia River Gorge</router-link></b-dropdown-item>
-            <b-dropdown-item href="#"><router-link class="link" to="/location/Crater Lake"></router-link>Crater Lake</b-dropdown-item>
-            <b-dropdown-item href="#"><router-link class="link" to="/location/Painted Hills">Painted Hills</router-link></b-dropdown-item>
-            <b-dropdown-item href="#"><router-link class="link" to="/location/Oregon Coast">Oregon Coast</router-link></b-dropdown-item>
-            <b-dropdown-item href="#"><router-link class="link" to="/location/Smith Rock">Smith Rock</router-link></b-dropdown-item>
-            <b-dropdown-item href="#"><router-link class="link" to="/location/The Wallowas">The Wallowas</router-link></b-dropdown-item>
-            <b-dropdown-item href="#"><router-link class="link" to="/location/Mt. Hood">Mt. Hood</router-link></b-dropdown-item>
+            <b-dropdown-item @click="reloadPage('Columbia River Gorge')">Columbia River Gorge</b-dropdown-item>
+            <b-dropdown-item @click="reloadPage('Crater Lake')">Crater Lake</b-dropdown-item>
+            <b-dropdown-item @click="reloadPage('Painted Hills')">Painted Hills</b-dropdown-item>
+            <b-dropdown-item @click="reloadPage('Oregon Coast')">Oregon Coast</b-dropdown-item>
+            <b-dropdown-item @click="reloadPage('Smith Rock')">Smith Rock</b-dropdown-item>
+            <b-dropdown-item @click="reloadPage('The Wallowas')">The Wallowas</b-dropdown-item>
+            <b-dropdown-item @click="reloadPage('Mt. Hood')">Mt. Hood</b-dropdown-item>
         </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
@@ -29,6 +29,24 @@
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+    methods: {
+    reloadPage(locName) {
+        
+        if(window.location.pathname.includes("location")){
+            console.log("test", window.location.pathname)
+            this.$router.push(locName) 
+        }else{
+            this.$router.push("/location/" + locName) 
+        }
+        window.location.reload();
+      }
+
+    }
+}
+</script>
 
 <style>
 
