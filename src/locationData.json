@@ -1,0 +1,109 @@
+{
+    "data": [
+        {
+            "name": "Columbia River Gorge",
+            "summary": "this is summary text for Columbia River Gorge",
+            "weather":{
+                "discription": null,
+                "humidity": null,
+                "temp": null,
+                "wind": null,
+                "icon": null
+            },
+            "weatherLoc": "Hood River",
+            "map": null,
+            "wiki": "Columbia_River_Gorge",
+            "image": null
+        },
+        {
+            "name": "Crater Lake",
+            "summary": "this is summary text for Crater Lake",
+            "weather":{
+                "discription": null,
+                "humidity": null,
+                "temp": null,
+                "wind": null,
+                "icon": null
+            },
+            "weatherLoc": "Medford",
+            "map": null,
+            "wiki": "Crater_Lake",
+            "image": null
+        },
+        {
+            "name": "Painted Hills",
+            "summary": "this is summary text for Painted Hills",
+            "weather":{
+                "discription": null,
+                "humidity": null,
+                "temp": null,
+                "wind": null,
+                "icon": null
+            },
+            "weatherLoc": "John Day",
+            "map": null,
+            "wiki":"Painted_Hills",
+            "image": null
+        },
+        {
+            "name": "Oregon Coast",
+            "summary": "this is summary text for Oregon Coast",
+            "weather":{
+                "discription": null,
+                "humidity": null,
+                "temp": null,
+                "wind": null,
+                "icon": null
+            },
+            "weatherLoc": "Cannon Beach",
+            "map": null,
+            "wiki":"Oregon_Coast",
+            "image": null
+        },
+        {
+            "name": "Smith Rock",
+            "summary": "this is summary text for Smith Rock",
+            "weather":{
+                "discription": null,
+                "humidity": null,
+                "temp": null,
+                "wind": null,
+                "icon": null
+            },
+            "weatherLoc": "Terrebonne",
+            "map": null,
+            "wiki":"Smith_Rock_State_Park",
+            "image": null
+        },
+        {
+            "name": "The Wallowas",
+            "summary": "this is summary text for The Wallowas",
+            "weather":{
+                "discription": null,
+                "humidity": null,
+                "temp": null,
+                "wind": null,
+                "icon": null
+            },
+            "weatherLoc": "Joseph",
+            "map": null,
+            "wiki": "Wallowa_Mountains",
+            "image": null
+        },
+        {
+            "name": "Mt. Hood",
+            "summary": "this is summary text for Mt. Hood",
+            "weather":{
+                "discription": null,
+                "humidity": null,
+                "temp": null,
+                "wind": null,
+                "icon": null
+            },
+            "weatherLoc": "Mount Hood",
+            "map": null,
+            "wiki": "Mount_Hood",
+            "image": null
+        }
+    ]
+}
