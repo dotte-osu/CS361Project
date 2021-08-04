@@ -21,7 +21,7 @@
                     <h1 class ="title">{{ locNames_1 }}</h1>
                     <div class ="summary" v-if="locNames_1 !== null">
                         <Summary :locName="locNames_1"></Summary>
-                        <WeatherWidget></WeatherWidget>
+                        <WeatherWidget :locName="locNames_1"></WeatherWidget>
                         <MapWidget></MapWidget>
                 </div>
                 <h3 class="title" v-if="locNames_1 === null">Please select a location to compare</h3>
@@ -44,7 +44,7 @@
                     <h1 class ="title">{{ locNames_2 }}</h1>
                     <div class ="summary" v-if="locNames_2 !== null">
                         <Summary :locName="locNames_2"></Summary>
-                        <WeatherWidget></WeatherWidget>
+                        <WeatherWidget :locName="locNames_2"></WeatherWidget>
                         <MapWidget></MapWidget>
                 </div>
                 <h3 class="title" v-if="locNames_2 === null">Please select a location to compare</h3>

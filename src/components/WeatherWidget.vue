@@ -20,9 +20,16 @@ export default {
     proxy: "http://localhost:8080",
     host: "localhost",
   },
+  props: {
+    locName: {
+      type: String,
+      required: true,
+      default: "none"
+    },
+  },
   data() {
     return {
-      name: this.$route.params.locname,
+      name: null,
       imgLink: null,
       humidity: null,
       temp: null,
@@ -41,9 +48,10 @@ export default {
       var self = this;
       var cityName = null;
       var stateName = "OR";
+      self.name = this.locName
 
       locationData.data.forEach((x) => {
-        if (x.name === this.$route.params.locname) {
+        if (x.name === self.name) {
           cityName = x.weatherLoc;
         }
       });

@@ -8,7 +8,7 @@
         
         <div class="locContainer">
             <div class="left secondBox">
-                <WeatherWidget></WeatherWidget>
+                <WeatherWidget :locName="name"></WeatherWidget>
             </div>
             <div class="left secondBox">
                 <MapWidget></MapWidget>
