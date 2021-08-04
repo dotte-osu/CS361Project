@@ -11,7 +11,7 @@
                 <WeatherWidget :locName="name"></WeatherWidget>
             </div>
             <div class="left secondBox">
-                <MapWidget></MapWidget>
+                <MapWidget :locName="name"></MapWidget>
             </div>
         </div>
 

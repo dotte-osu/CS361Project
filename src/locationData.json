@@ -11,9 +11,10 @@
                 "icon": null
             },
             "weatherLoc": "Hood River",
-            "map": null,
             "wiki": "Columbia_River_Gorge",
-            "image": null
+            "image": null,
+            "Latitude": "45.7253",
+            "Longitude": "-121.7300"
         },
         {
             "name": "Crater Lake",
@@ -26,9 +27,10 @@
                 "icon": null
             },
             "weatherLoc": "Medford",
-            "map": null,
             "wiki": "Crater_Lake",
-            "image": null
+            "image": null,
+            "Latitude": "42.9446",
+            "Longitude": "-122.1090"
         },
         {
             "name": "Painted Hills",
@@ -41,9 +43,10 @@
                 "icon": null
             },
             "weatherLoc": "John Day",
-            "map": null,
             "wiki":"Painted_Hills",
-            "image": null
+            "image": null,
+            "Latitude": "44.6615",
+            "Longitude": "-120.2731"
         },
         {
             "name": "Oregon Coast",
@@ -56,9 +59,10 @@
                 "icon": null
             },
             "weatherLoc": "Cannon Beach",
-            "map": null,
             "wiki":"Oregon_Coast",
-            "image": null
+            "image": null,
+            "Latitude": "45.8918",
+            "Longitude": "-123.9615"
         },
         {
             "name": "Smith Rock",
@@ -71,9 +75,10 @@
                 "icon": null
             },
             "weatherLoc": "Terrebonne",
-            "map": null,
             "wiki":"Smith_Rock_State_Park",
-            "image": null
+            "image": null,
+            "Latitude": "44.3682",
+            "Longitude": "-121.1406"
         },
         {
             "name": "The Wallowas",
@@ -86,9 +91,10 @@
                 "icon": null
             },
             "weatherLoc": "Joseph",
-            "map": null,
             "wiki": "Wallowa_Mountains",
-            "image": null
+            "image": null,
+            "Latitude": "45.354744",
+            "Longitude": "-117.1345"
         },
         {
             "name": "Mt. Hood",
@@ -101,9 +107,10 @@
                 "icon": null
             },
             "weatherLoc": "Mount Hood",
-            "map": null,
             "wiki": "Mount_Hood",
-            "image": null
+            "image": null,
+            "Latitude": "45.3736",
+            "Longitude": "-121.6960"
         }
     ]
 }
