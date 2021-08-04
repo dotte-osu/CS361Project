@@ -56,9 +56,8 @@
 export default {
   methods: {
     reloadPage(locName) {
-      if (locName != this.name) {
+      if (locName != this.$route.params.locname) {
         if (window.location.pathname.includes("location")) {
-          
           this.$router.push(locName);
         } else {
           this.$router.push("/location/" + locName);
