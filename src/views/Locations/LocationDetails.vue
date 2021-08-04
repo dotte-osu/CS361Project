@@ -3,7 +3,7 @@
         <div ><img :src="imageLink" :alt="name" width="500" height="400"></div>
         <h1 class ="title">{{ name }}</h1>
         <div class ="summary">
-            <Summary></Summary>
+            <Summary :locName="name"></Summary>
         </div>
         
         <div class="locContainer">
