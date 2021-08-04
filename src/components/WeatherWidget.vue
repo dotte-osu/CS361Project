@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="weather">
     <h4>Current Conditions</h4>
     <div>
         <img :src="imgLink" width="100" height="100"/>
@@ -122,3 +122,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.weather{
+  padding: 10px;
+}
+</style>

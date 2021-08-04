@@ -2,47 +2,25 @@
   <div id="app">
     <div>
       <b-navbar toggleable="lg" type="dark" variant="success">
-        <b-navbar-brand class="navbar-header" href="#"
-          ><router-link class="link" to="/"
-            >7 Wonders Of Oregon</router-link
-          ></b-navbar-brand
-        >
+        <b-navbar-brand class="navbar-header" href="#"><router-link class="link" to="/">7 Wonders Of Oregon</router-link></b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
-            <b-nav-item href="#"
-              ><router-link class="link" to="/compare"
-                >Compare</router-link
-              ></b-nav-item
-            >
+            <b-nav-item href="#"><router-link class="link" to="/compare">Compare</router-link></b-nav-item>
           </b-navbar-nav>
 
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
             <b-nav-item-dropdown text="Locations" right>
-              <b-dropdown-item @click="reloadPage('Columbia River Gorge')"
-                >Columbia River Gorge</b-dropdown-item
-              >
-              <b-dropdown-item @click="reloadPage('Crater Lake')"
-                >Crater Lake</b-dropdown-item
-              >
-              <b-dropdown-item @click="reloadPage('Painted Hills')"
-                >Painted Hills</b-dropdown-item
-              >
-              <b-dropdown-item @click="reloadPage('Oregon Coast')"
-                >Oregon Coast</b-dropdown-item
-              >
-              <b-dropdown-item @click="reloadPage('Smith Rock')"
-                >Smith Rock</b-dropdown-item
-              >
-              <b-dropdown-item @click="reloadPage('The Wallowas')"
-                >The Wallowas</b-dropdown-item
-              >
-              <b-dropdown-item @click="reloadPage('Mt. Hood')"
-                >Mt. Hood</b-dropdown-item
-              >
+              <b-dropdown-item @click="reloadPage('Columbia River Gorge')">Columbia River Gorge</b-dropdown-item>
+              <b-dropdown-item @click="reloadPage('Crater Lake')">Crater Lake</b-dropdown-item>
+              <b-dropdown-item @click="reloadPage('Painted Hills')">Painted Hills</b-dropdown-item>
+              <b-dropdown-item @click="reloadPage('Oregon Coast')">Oregon Coast</b-dropdown-item>
+              <b-dropdown-item @click="reloadPage('Smith Rock')">Smith Rock</b-dropdown-item>
+              <b-dropdown-item @click="reloadPage('The Wallowas')">The Wallowas</b-dropdown-item>
+              <b-dropdown-item @click="reloadPage('Mt. Hood')">Mt. Hood</b-dropdown-item>
             </b-nav-item-dropdown>
           </b-navbar-nav>
         </b-collapse>

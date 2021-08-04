@@ -18,13 +18,14 @@
                 </div>
                 <div v-if="locNames_1 !== null">
                     <img v-if="locNames_1 !== null" src="https://lh3.googleusercontent.com/olCsisxWA8GeqXwIjddoYALtnRMD0IujC8yfdjax_LNQSC_Wugsu3jltr36vdVZcFJK2jCSWBzrO6LFmgYg5_nfemrUDhC8NdN6LOFtQCoWUeldP3Bw9FyWCZFlS3BiIdNgiBHzVBvx1Wx_7HueZnaQ11CUzjYwf4S3_E3ifVo6GwQ-X3JUWuPw_RTZCTBzJ-e-hi5P1ywdySXRQ0uXX1Ii54UmO-6aXwd5iaS62ANDnyvAG_Bd2GZEIhuyoG5d0NNem_t37DxhdWcDBm5TnZJQP67gLt9Qla4cu8ep3ghPryJmAMhGHSFh6JRpWMBEmU8iFKEN4p6TiGcYiKJrWGiUbFQF-vqsA0Tu1_BmbMeJ9bebtEwYsa60_fNqgOe5eBSYEzFUhdJvn1XhuX2u3TB9Yc7JIqZO0jqjPYDpK4Dgr2mgspJatm6tXGubr3N8HE2YS76uNCkh5joIN8qqerlea0qHn80fsmwC2JVtCpwRlJqAJbRHAWn7R-XDF5SxY7lkYw07BWPqoYdvH15qL92vRPQkB4RfOu9qrFerBcYOpx7tEwIaChm-vjJKnqw35TM9IBF-yfMb7z5b_idUOO82zvdqiO8issTjwNhFSj2LQ0R_7RRMPQzSO8tXR4bA7_dRur6NPuQtJlOTMyVfS4r6Lq-zMDr8yVpNutfT4J9E0Imn8mvJOZLhYDm9SWEVZs7DioKCpbrpyMW8Ro9pa8Fr9=w960-h540-no?authuser=0" class="card-img-top" alt="Painted Hills" width="500" height="400"></div>
-                    <h1 class ="title">{{ locNames_1 }}</h1>
-                    <div class ="summary" v-if="locNames_1 !== null">
-                        <Summary :locName="locNames_1"></Summary>
-                        <WeatherWidget :locName="locNames_1"></WeatherWidget>
-                    </div>
+                    <h1 class ="name">{{ locNames_1 }}</h1>
+                    <Summary class ="summary" v-if="locNames_1 !== null" :locName="locNames_1"></Summary>
+                    <WeatherWidget  v-if="locNames_1 !== null" :locName="locNames_1"></WeatherWidget>
                     <MapWidget v-if="locNames_1 !== null" :locName="locNames_1"></MapWidget>
                 <h3 class="title" v-if="locNames_1 === null">Please select a location to compare</h3>
+                <br>
+                <br>
+                <br>
             </div>
             <div class="right secondBox">
                 <div>
@@ -41,13 +42,14 @@
                 </div>
                 <div v-if="locNames_2 !== null">
                     <img v-if="locNames_2 !== null" src="https://lh3.googleusercontent.com/olCsisxWA8GeqXwIjddoYALtnRMD0IujC8yfdjax_LNQSC_Wugsu3jltr36vdVZcFJK2jCSWBzrO6LFmgYg5_nfemrUDhC8NdN6LOFtQCoWUeldP3Bw9FyWCZFlS3BiIdNgiBHzVBvx1Wx_7HueZnaQ11CUzjYwf4S3_E3ifVo6GwQ-X3JUWuPw_RTZCTBzJ-e-hi5P1ywdySXRQ0uXX1Ii54UmO-6aXwd5iaS62ANDnyvAG_Bd2GZEIhuyoG5d0NNem_t37DxhdWcDBm5TnZJQP67gLt9Qla4cu8ep3ghPryJmAMhGHSFh6JRpWMBEmU8iFKEN4p6TiGcYiKJrWGiUbFQF-vqsA0Tu1_BmbMeJ9bebtEwYsa60_fNqgOe5eBSYEzFUhdJvn1XhuX2u3TB9Yc7JIqZO0jqjPYDpK4Dgr2mgspJatm6tXGubr3N8HE2YS76uNCkh5joIN8qqerlea0qHn80fsmwC2JVtCpwRlJqAJbRHAWn7R-XDF5SxY7lkYw07BWPqoYdvH15qL92vRPQkB4RfOu9qrFerBcYOpx7tEwIaChm-vjJKnqw35TM9IBF-yfMb7z5b_idUOO82zvdqiO8issTjwNhFSj2LQ0R_7RRMPQzSO8tXR4bA7_dRur6NPuQtJlOTMyVfS4r6Lq-zMDr8yVpNutfT4J9E0Imn8mvJOZLhYDm9SWEVZs7DioKCpbrpyMW8Ro9pa8Fr9=w960-h540-no?authuser=0" class="card-img-top" alt="Painted Hills" width="500" height="400"></div>
-                    <h1 class ="title">{{ locNames_2 }}</h1>
-                    <div class ="summary" v-if="locNames_2 !== null">
-                        <Summary :locName="locNames_2"></Summary>
-                        <WeatherWidget :locName="locNames_2"></WeatherWidget>
-                    </div>
+                    <h1 class ="name">{{ locNames_2 }}</h1>
+                    <Summary class ="summary" v-if="locNames_2 !== null" :locName="locNames_2"></Summary>
+                    <WeatherWidget v-if="locNames_2 !== null" :locName="locNames_2"></WeatherWidget>
                     <MapWidget  v-if="locNames_2 !== null" :locName="locNames_2"></MapWidget>
                 <h3 class="title" v-if="locNames_2 === null">Please select a location to compare</h3>
+                <br>
+                <br>
+                <br>
             </div>
         </div>
     </div>
@@ -97,8 +99,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.name{
+    height: 100px;
+    padding: 10px;
+}
 .summary{
+    height: 300px;
     width: 80%;
     margin: auto;
     padding: 10px;
@@ -107,9 +114,8 @@ export default {
     display: flex;
     margin: auto;
     padding: 10px;
-    height: 400px;
-}
 
+}
 .secondBox{
     width: 45%;
     margin: auto;

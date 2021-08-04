@@ -1,6 +1,6 @@
 <template>
     <div class="location">
-        <div ><img :src="imageLink" :alt="name" width="500" height="400"></div>
+        <div ><img :src="imageLink" :alt="name" height="400" style="padding-top: 20px;"></div>
         <h1 class ="title">{{ name }}</h1>
         <div class ="summary">
             <Summary :locName="name"></Summary>
@@ -28,6 +28,9 @@
 
 
         <b-button variant="success" size="lg"><router-link class="link" to="/compare">Compare with another location!</router-link></b-button>
+        <br>
+        <br>
+        <br>
     </div>
 </template>
 
