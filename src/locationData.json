@@ -3,112 +3,56 @@
         {
             "name": "Columbia River Gorge",
             "summary": "this is summary text for Columbia River Gorge",
-            "weather":{
-                "discription": null,
-                "humidity": null,
-                "temp": null,
-                "wind": null,
-                "icon": null
-            },
             "weatherLoc": "Hood River",
             "wiki": "Columbia_River_Gorge",
-            "image": null,
             "Latitude": "45.7253",
             "Longitude": "-121.7300"
         },
         {
             "name": "Crater Lake",
             "summary": "this is summary text for Crater Lake",
-            "weather":{
-                "discription": null,
-                "humidity": null,
-                "temp": null,
-                "wind": null,
-                "icon": null
-            },
             "weatherLoc": "Medford",
             "wiki": "Crater_Lake",
-            "image": null,
             "Latitude": "42.9446",
             "Longitude": "-122.1090"
         },
         {
             "name": "Painted Hills",
             "summary": "this is summary text for Painted Hills",
-            "weather":{
-                "discription": null,
-                "humidity": null,
-                "temp": null,
-                "wind": null,
-                "icon": null
-            },
             "weatherLoc": "John Day",
             "wiki":"Painted_Hills",
-            "image": null,
             "Latitude": "44.6615",
             "Longitude": "-120.2731"
         },
         {
             "name": "Oregon Coast",
             "summary": "this is summary text for Oregon Coast",
-            "weather":{
-                "discription": null,
-                "humidity": null,
-                "temp": null,
-                "wind": null,
-                "icon": null
-            },
             "weatherLoc": "Cannon Beach",
             "wiki":"Oregon_Coast",
-            "image": null,
             "Latitude": "45.8918",
             "Longitude": "-123.9615"
         },
         {
             "name": "Smith Rock",
             "summary": "this is summary text for Smith Rock",
-            "weather":{
-                "discription": null,
-                "humidity": null,
-                "temp": null,
-                "wind": null,
-                "icon": null
-            },
             "weatherLoc": "Terrebonne",
             "wiki":"Smith_Rock_State_Park",
-            "image": null,
             "Latitude": "44.3682",
             "Longitude": "-121.1406"
         },
         {
             "name": "The Wallowas",
             "summary": "this is summary text for The Wallowas",
-            "weather":{
-                "discription": null,
-                "humidity": null,
-                "temp": null,
-                "wind": null,
-                "icon": null
-            },
             "weatherLoc": "Joseph",
             "wiki": "Wallowa_Mountains",
-            "image": null,
             "Latitude": "45.354744",
             "Longitude": "-117.1345"
         },
         {
             "name": "Mt. Hood",
             "summary": "this is summary text for Mt. Hood",
-            "weather":{
-                "discription": null,
-                "humidity": null,
-                "temp": null,
-                "wind": null,
-                "icon": null
-            },
             "weatherLoc": "Mount Hood",
             "wiki": "Mount_Hood",
-            "image": null,
             "Latitude": "45.3736",
             "Longitude": "-121.6960"
         }

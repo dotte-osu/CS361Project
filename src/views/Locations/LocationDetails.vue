@@ -49,7 +49,6 @@ export default {
         locationData.data.forEach(x => {
             
             if(x.name === this.$route.params.locname) {
-                imageLink = x.image
                 wikiName = x.wiki
             }
         });
