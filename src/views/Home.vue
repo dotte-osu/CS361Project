@@ -18,11 +18,7 @@
         <li class="flex-item">
           <div class="card" style="width: 18rem">
             <router-link class="homelink" to="/location/Columbia River Gorge">
-              <img
-                :src="locData.data[0].image"
-                class="card-img-top"
-                alt="Columbia River Gorge"
-              />
+                <ImageWidget locName="Columbia River Gorge" ></ImageWidget>
               <div class="card-body">
                 <p class="card-text">Columbia River Gorge</p>
               </div>
@@ -32,11 +28,7 @@
         <li class="flex-item">
           <div class="card" style="width: 18rem">
             <router-link class="homelink" to="/location/Crater Lake">
-              <img
-                :src="locData.data[1].image"
-                class="card-img-top"
-                alt="Crater Lake"
-              />
+              <ImageWidget locName="Crater Lake" ></ImageWidget>
               <div class="card-body">
                 <p class="card-text">Crater Lake</p>
               </div>
@@ -46,11 +38,7 @@
         <li class="flex-item">
           <div class="card" style="width: 18rem">
             <router-link class="homelink" to="/location/Painted Hills">
-              <img
-                :src="locData.data[2].image"
-                class="card-img-top"
-                alt="Painted Hills"
-              />
+              <ImageWidget locName="Painted Hills" ></ImageWidget>
               <div class="card-body">
                 <p class="card-text">Painted Hills</p>
               </div>
@@ -60,11 +48,7 @@
         <li class="flex-item">
           <div class="card" style="width: 18rem">
             <router-link class="homelink" to="/location/Oregon Coast">
-              <img
-                :src="locData.data[3].image"
-                class="card-img-top"
-                alt="Oregon Coast"
-              />
+              <ImageWidget locName="Oregon Coast" ></ImageWidget>
               <div class="card-body">
                 <p class="card-text">Oregon Coast</p>
               </div>
@@ -76,11 +60,7 @@
         <li class="flex-item">
           <div class="card" style="width: 18rem">
             <router-link class="homelink" to="/location/Smith Rock">
-              <img
-                :src="locData.data[4].image"
-                class="card-img-top"
-                alt="Smith Rock"
-              />
+              <ImageWidget locName="Smith Rock" ></ImageWidget>
               <div class="card-body">
                 <p class="card-text">Smith Rock</p>
               </div>
@@ -90,11 +70,7 @@
         <li class="flex-item">
           <div class="card" style="width: 18rem">
             <router-link class="homelink" to="/location/The Wallowas">
-              <img
-                :src="locData.data[5].image"
-                class="card-img-top"
-                alt="The Wallowas"
-              />
+              <ImageWidget locName="The Wallowas" ></ImageWidget>
               <div class="card-body">
                 <p class="card-text">The Wallowas</p>
               </div>
@@ -104,11 +80,7 @@
         <li class="flex-item">
           <div class="card" style="width: 18rem">
             <router-link class="homelink" to="/location/Mt. Hood">
-              <img
-                :src="locData.data[6].image"
-                class="card-img-top"
-                alt="Mt. Hood"
-              />
+              <ImageWidget locName="Mt. Hood" ></ImageWidget>
               <div class="card-body">
                 <p class="card-text">Mt. Hood</p>
               </div>
@@ -125,38 +97,18 @@
 <script>
 // @ is an alias to /src
 import locationData from "@/locationData.json";
+import ImageWidget from '@/components/ImageWidget.vue'
 
 export default {
   name: "Home",
+  components: {
+    ImageWidget
+  },
   data() {
     return {
-      name: this.$route.params.locname,
       locData: locationData
     };
-  },
-  created() {
-    this.fetchData();
-  },
-  methods: {
-    fetchData() {
-      var self = this;
-      var wikiName = null;
-      locationData.data.forEach((x) => {
-        var url =
-          "https://imagescraperapi.herokuapp.com/?url=https://en.wikipedia.org/wiki/" + x.wiki;
-          
-        // fetch(url)
-        //   .then(function (resp) {
-        //     return resp.json();
-        //   }) // Convert data to json
-        //   .then(function (data) {
-        //     console.log(data.image-url);
-        //     x.image = data.image-url;
-        //   });
-        x.image = "//upload.wikimedia.org/wikipedia/commons/thumb/6/62/Lostine_River_valley.jpg/220px-Lostine_River_valley.jpg"
-      });
-    },
-  },
+  }
 };
 </script>
 
@@ -171,7 +123,6 @@ export default {
   margin: 80px;
 }
 .flex-container {
-  /* We first create a flex layout context */
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -189,4 +140,5 @@ export default {
   outline: none;
   text-decoration: none;
 }
+
 </style>

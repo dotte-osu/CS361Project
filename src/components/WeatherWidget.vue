@@ -57,58 +57,13 @@ export default {
       });
 
       var url =
-        "https://api.openweathermap.org/data/2.5/weather?q=" +
-        cityName +
-        "," +
-        stateName +
-        ",us&appid=" +
-        Keys.data[0].APY_KEY;
-      console.log(url);
-      fetch(url)
+        "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "," + stateName + ",us&appid=" + Keys.data[0].APY_KEY;
+        fetch(url)
         .then(function (resp) {
           return resp.json();
-        }) // Convert data to json
+        }) 
         .then(function (data) {
-          // today's date
-          var today = new Date();
-          var yy = today.getFullYear();
-          var dd = today.getDate();
-          var mm = today.getMonth() + 1;
-          var hh = today.getHours();
-          var min = today.getMinutes();
-          if (min < 10) {
-            min = "0" + min;
-          }
-          var day = today.getDay();
-          var dayname = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-          var monthname = [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec",
-          ];
-          var date =
-            dayname[day] +
-            " " +
-            monthname[mm - 1] +
-            " " +
-            dd +
-            " " +
-            yy +
-            " " +
-            hh +
-            ":" +
-            min;
-
-          //get date from API
+          //store weather data from API to variables
           self.weather = data.weather[0].description;
           self.humidity = data.main.humidity;
           self.temp =

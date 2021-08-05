@@ -1,6 +1,8 @@
 <template>
     <div class="location">
-        <div ><img :src="imageLink" :alt="name" height="400" style="padding-top: 20px;"></div>
+        <div style="width: 500px; margin: auto; padding: 20px;">
+              <ImageWidget locName="Smith Rock" ></ImageWidget>
+        </div>
         <h1 class ="title">{{ name }}</h1>
         <div class ="summary">
             <Summary :locName="name"></Summary>
@@ -35,6 +37,7 @@
 </template>
 
 <script>
+import ImageWidget from '@/components/ImageWidget.vue'
 import Summary from '@/components/Summary.vue'
 import WeatherWidget from '@/components/WeatherWidget.vue'
 import MapWidget from '@/components/MapWidget.vue'
@@ -44,10 +47,10 @@ export default {
     components: {
         Summary,
         WeatherWidget,
-        MapWidget
+        MapWidget,
+        ImageWidget
     },
     data(){
-        var imageLink = null;
         var wikiName = null;
         locationData.data.forEach(x => {
             
@@ -56,23 +59,8 @@ export default {
             }
         });
 
-        if(imageLink == null){
-            var url =
-          "https://imagescraperapi.herokuapp.com/?url=https://en.wikipedia.org/wiki/" + wikiName;
-          
-            // fetch(url)
-            //   .then(function (resp) {
-            //     return resp.json();
-            //   }) // Convert data to json
-            //   .then(function (data) {
-            //     console.log(data.image-url);
-            //     x.image = data.image-url;
-            //   });
-            imageLink = "//upload.wikimedia.org/wikipedia/commons/thumb/8/80/PaintedHillsPano4.jpg/1000px-PaintedHillsPano4.jpg"
-        }
         return{
             name: this.$route.params.locname,
-            imageLink: imageLink
         }
     },
     methods: {
