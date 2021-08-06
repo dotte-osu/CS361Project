@@ -7,6 +7,9 @@
         <div class ="summary">
             <Summary :locName="name"></Summary>
         </div>
+        <div class ="table">
+            <TableWidget :locName="name" style="margin:auto;"></TableWidget>
+        </div>
         
         <div class="locContainer">
             <div class="left secondBox">
@@ -41,6 +44,7 @@ import ImageWidget from '@/components/ImageWidget.vue'
 import Summary from '@/components/Summary.vue'
 import WeatherWidget from '@/components/WeatherWidget.vue'
 import MapWidget from '@/components/MapWidget.vue'
+import TableWidget from '@/components/TableWidget.vue'
 import locationData from "@/locationData.json";
 
 export default {
@@ -48,7 +52,8 @@ export default {
         Summary,
         WeatherWidget,
         MapWidget,
-        ImageWidget
+        ImageWidget,
+        TableWidget
     },
     data(){
         var wikiName = null;
