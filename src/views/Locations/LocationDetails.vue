@@ -7,9 +7,6 @@
         <div class ="summary">
             <Summary :locName="name"></Summary>
         </div>
-        <div class ="table">
-            <TableWidget :locName="name" style="margin:auto;"></TableWidget>
-        </div>
         
         <div class="locContainer">
             <div class="left secondBox">
@@ -18,6 +15,10 @@
             <div class="left secondBox">
                 <MapWidget :locName="name"></MapWidget>
             </div>
+        </div>
+
+        <div class ="table">
+            <TableWidget :locName="name" style="margin:auto;"></TableWidget>
         </div>
 
         <b-dropdown id="dropdown-1" text="Check another location!" class="m-md-2" variant="success" size="lg">

@@ -8,41 +8,63 @@
 import locationData from "@/locationData.json";
 
 export default {
+  devServer: {
+    proxy: "http://localhost:8080",
+    host: "localhost",
+  },
   props: {
     locName: {
       type: String,
       required: true,
-      default: "none",
+      default: "none"
     },
   },
   data() {
-    var txt = null
-    
-    locationData.data.forEach((x) => {
-      if (x.wiki === this.locName) {
-        var url = "https://" + x.wiki;
-      }
-      
-    });
-
-    txt = '{"name":"John", "age":30, "city":"New York"}'
-    var obj = JSON.parse(txt);
-
-    var data = []
-    Object.keys(obj).forEach(function(k){
-      var d = {
-                title : k,
-                value : obj[k]
-            };
-      data.push(d)
-
-    });
-
-    console.log(data)
     return {
-      data : data
-    }
-    
+      data: []
+    };
+  },
+  created() {
+    this.fetchData();
+  },
+  watch: {
+    $route: "fetchData",
+  },
+  methods: {
+    fetchData() {
+      var self = this;
+      var url =null
+      self.name = this.locName
+
+      locationData.data.forEach((x) => {
+        if (x.name === self.name) {
+          console.log(x.wiki.replaceAll("_", "+"))
+          url = "https://state-comparison.herokuapp.com/search?search=" + x.wiki.replaceAll("_", "+")
+        }
+      });
+      
+        fetch(url)
+        .then(function (resp) {
+          return resp.json();
+        }) 
+        .then(function (obj) {
+          
+          
+          Object.keys(obj).forEach(function(k){
+            var d = {
+                      type : k,
+                      data : obj[k]
+                  };
+            
+          
+          if(!d.type.includes("Coordinates") && !d.type.includes("Website")){
+            self.data.push(d)
+          }
+            
+          });
+          
+        });
+    },
   },
 };
 </script>
