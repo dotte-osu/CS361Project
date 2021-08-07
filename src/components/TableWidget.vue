@@ -38,7 +38,6 @@ export default {
 
       locationData.data.forEach((x) => {
         if (x.name === self.name) {
-          console.log(x.wiki.replaceAll("_", "+"))
           url = "https://state-comparison.herokuapp.com/search?search=" + x.wiki.replaceAll("_", "+")
         }
       });
@@ -49,14 +48,13 @@ export default {
         }) 
         .then(function (obj) {
           
-          
           Object.keys(obj).forEach(function(k){
             var d = {
                       type : k,
                       data : obj[k]
                   };
             
-          
+
           if(!d.type.includes("Coordinates") && !d.type.includes("Website")){
             self.data.push(d)
           }

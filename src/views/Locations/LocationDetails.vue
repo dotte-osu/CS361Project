@@ -1,7 +1,7 @@
 <template>
     <div class="location">
         <div style="width: 500px; margin: auto; padding: 20px;">
-              <ImageWidget locName="Smith Rock" ></ImageWidget>
+              <ImageWidget :locName="name" ></ImageWidget>
         </div>
         <h1 class ="title">{{ name }}</h1>
         <div class ="summary">

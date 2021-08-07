@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img :src="imageLink"  alt="Crater Lake" />
+    <img :src="imageLink"  alt="park image" />
   </div>
 </template>
 
@@ -8,37 +8,55 @@
 import locationData from "@/locationData.json";
 
 export default {
+  devServer: {
+    proxy: "http://localhost:8080",
+    host: "localhost",
+  },
   props: {
     locName: {
       type: String,
       required: true,
-      default: "none",
+      default: "none"
     },
   },
   data() {
-    var imageLink = null
-    
-    locationData.data.forEach((x) => {
-      if (x.wiki === this.locName) {
-        var url = "https://imagescraperapi.herokuapp.com/?url=https://en.wikipedia.org/wiki/" + x.wiki;
-      }
-      // fetch(url)
-      //   .then(function (resp) {
-      //     return resp.json();
-      //   }) // Convert data to json
-      //   .then(function (data) {
-      //     console.log(data.image-url);
-      //     x.image = data.image-url;
-      //   });
-      imageLink = "//upload.wikimedia.org/wikipedia/commons/thumb/6/62/Lostine_River_valley.jpg/220px-Lostine_River_valley.jpg"
-    });
-
     return {
-      imageLink : imageLink
-    }
-    
+      imageLink: null
+    };
+  },
+  created() {
+    this.fetchData();
+  },
+  watch: {
+    $route: "fetchData",
+  },
+  methods: {
+    fetchData() {
+      var self = this;
+      var url =null
+      self.name = this.locName
+
+
+      locationData.data.forEach((x) => {
+        if (x.name === self.name) {
+          url = "https://imagescraperapi.herokuapp.com/?url=https://en.wikipedia.org/wiki/" + x.wiki;
+        }
+      });
+      console.log(url)
+      fetch(url)
+        .then(function (resp) {
+          return resp.json();
+        }) 
+        .then(function (obj) {
+          Object.keys(obj).forEach(function(k){
+          self.imageLink = obj[k]
+        });
+        });
+    },
   },
 };
+
+
 </script>
 
 <style scoped>
