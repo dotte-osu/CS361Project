@@ -1,11 +1,13 @@
 <template>
     <div class="location">
         <h3 class="title">Let's compare locations</h3>
-        
+        <div>
+            <b-button v-if="selected_1 == true && selected_2 == true" @click="clear()" variant="success" size="lg" style="mergin:auto">Clear Locations</b-button>
+        </div>
         <div class="locContainer">
             <div class="left secondBox">
                 <div>
-                    <b-dropdown id="dropdown-1" text="Choose location to compare" class="m-md-2" variant="success" size="lg">
+                    <b-dropdown v-if="selected_1 == false" id="dropdown-1" text="Choose location to compare" class="m-md-2" variant="success" size="lg">
                         <b-dropdown-item @click="onClick1('Columbia River Gorge')">Columbia River Gorge</b-dropdown-item>
                         <b-dropdown-item @click="onClick1('Crater Lake')">Crater Lake</b-dropdown-item>
                         <b-dropdown-item @click="onClick1('Painted Hills')">Painted Hills</b-dropdown-item>
@@ -16,21 +18,21 @@
                         <b-dropdown-divider></b-dropdown-divider>
                     </b-dropdown>
                 </div>
-                <div v-if="locNames_1 !== null" style="width: 500px; margin: auto; padding: 20px;">
-                    <ImageWidget v-if="locNames_1 !== null" :locName="locNames_1" ></ImageWidget>
+                <div v-if="name_1 !== null" style="width: 500px; margin: auto; padding: 20px;">
+                    <ImageWidget v-if="name_1 !== null" :locName="name_1" ></ImageWidget>
                 </div>
-                    <h1 class ="name">{{ locNames_1 }}</h1>
-                    <Summary class ="summary" v-if="locNames_1 !== null" :locName="locNames_1"></Summary>
-                    <WeatherWidget  v-if="locNames_1 !== null" :locName="locNames_1"></WeatherWidget>
-                    <MapWidget v-if="locNames_1 !== null" :locName="locNames_1"></MapWidget>
-                <h3 class="title" v-if="locNames_1 === null">Please select a location to compare</h3>
+                    <h1 class ="name">{{ name_1 }}</h1>
+                    <Summary class ="summary" v-if="name_1 !== null" :locName="name_1"></Summary>
+                    <WeatherWidget  v-if="name_1 !== null" :locName="name_1"></WeatherWidget>
+                    <MapWidget v-if="name_1 !== null" :locName="name_1"></MapWidget>
+                <h3 class="title" v-if="name_1 === null">Please select a location to compare</h3>
                 <br>
                 <br>
                 <br>
             </div>
             <div class="right secondBox">
                 <div>
-                    <b-dropdown id="dropdown-1" text="Choose location to compare" class="m-md-2" variant="success" size="lg">
+                    <b-dropdown v-if="selected_2 == false" id="dropdown-1" text="Choose location to compare" class="m-md-2" variant="success" size="lg">
                         <b-dropdown-item @click="onClick2('Columbia River Gorge')">Columbia River Gorge</b-dropdown-item>
                         <b-dropdown-item @click="onClick2('Crater Lake')">Crater Lake</b-dropdown-item>
                         <b-dropdown-item @click="onClick2('Painted Hills')">Painted Hills</b-dropdown-item>
@@ -41,14 +43,14 @@
                         <b-dropdown-divider></b-dropdown-divider>
                     </b-dropdown>
                 </div>
-                <div v-if="locNames_2 !== null" style="width: 500px; margin: auto; padding: 20px;">
-                    <ImageWidget v-if="locNames_2 !== null" :locName="locNames_2" ></ImageWidget>
+                <div v-if="name_2 !== null" style="width: 500px; margin: auto; padding: 20px;">
+                    <ImageWidget v-if="name_2 !== null" :locName="name_2" ></ImageWidget>
                 </div>
-                <h1 class ="name">{{ locNames_2 }}</h1>
-                    <Summary class ="summary" v-if="locNames_2 !== null" :locName="locNames_2"></Summary>
-                    <WeatherWidget v-if="locNames_2 !== null" :locName="locNames_2"></WeatherWidget>
-                    <MapWidget  v-if="locNames_2 !== null" :locName="locNames_2"></MapWidget>
-                <h3 class="title" v-if="locNames_2 === null">Please select a location to compare</h3>
+                <h1 class ="name">{{ name_2 }}</h1>
+                    <Summary class ="summary" v-if="name_2 !== null" :locName="name_2"></Summary>
+                    <WeatherWidget v-if="name_2 !== null" :locName="name_2"></WeatherWidget>
+                    <MapWidget  v-if="name_2 !== null" :locName="name_2"></MapWidget>
+                <h3 class="title" v-if="name_2 === null">Please select a location to compare</h3>
                 <br>
                 <br>
                 <br>
@@ -83,17 +85,28 @@ export default {
             default: null
         }
     },
+    data() {
+        return {
+            name_1: null,
+            name_2: null,
+            selected_1: false,
+            selected_2: false,
+        };
+    },
     methods: {
         onClick1(loc) {
-            this.locNames_1 = loc
+            var self = this;
+            self.name_1 = null
+            self.name_1 = loc
+            self.selected_1 = true
         },
         onClick2(loc) {       
-            this.locNames_2 = loc
-        }
-    },
-    computed: {
-        Locs: function () {
-            return this.props;
+            var self = this;
+            self.name_2 = loc
+            self.selected_2 = true
+        },
+        clear(){
+            window.location.reload();
         }
     }
 }
