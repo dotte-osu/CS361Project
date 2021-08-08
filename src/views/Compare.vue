@@ -19,7 +19,7 @@
                     </b-dropdown>
                 </div>
                 <div v-if="name_1 !== null" style="width: 500px; margin: auto; padding: 20px;">
-                    <ImageWidget v-if="name_1 !== null" :locName="name_1" ></ImageWidget>
+                    <ImageWidget v-if="name_1 !== null" :locName="name_1"  style="width: 30rem; height: 13rem;"></ImageWidget>
                 </div>
                     <h1 class ="name">{{ name_1 }}</h1>
                     <Summary class ="summary" v-if="name_1 !== null" :locName="name_1"></Summary>
@@ -44,7 +44,7 @@
                     </b-dropdown>
                 </div>
                 <div v-if="name_2 !== null" style="width: 500px; margin: auto; padding: 20px;">
-                    <ImageWidget v-if="name_2 !== null" :locName="name_2" ></ImageWidget>
+                    <ImageWidget v-if="name_2 !== null" :locName="name_2"  style="width: 30rem; height: 13rem;"></ImageWidget>
                 </div>
                 <h1 class ="name">{{ name_2 }}</h1>
                     <Summary class ="summary" v-if="name_2 !== null" :locName="name_2"></Summary>

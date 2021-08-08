@@ -18,7 +18,7 @@
         <li class="flex-item">
           <div class="card" style="width: 18rem">
             <router-link class="homelink" to="/location/Columbia River Gorge">
-                <ImageWidget locName="Columbia River Gorge" ></ImageWidget>
+                <ImageWidget locName="Columbia River Gorge" style="width: 18rem; height: 13rem;"></ImageWidget>
               <div class="card-body">
                 <p class="card-text">Columbia River Gorge</p>
               </div>
@@ -28,7 +28,7 @@
         <li class="flex-item">
           <div class="card" style="width: 18rem">
             <router-link class="homelink" to="/location/Crater Lake">
-              <ImageWidget locName="Crater Lake" ></ImageWidget>
+              <ImageWidget locName="Crater Lake" style="width: 18rem; height: 13rem;"></ImageWidget>
               <div class="card-body">
                 <p class="card-text">Crater Lake</p>
               </div>
@@ -38,7 +38,7 @@
         <li class="flex-item">
           <div class="card" style="width: 18rem">
             <router-link class="homelink" to="/location/Painted Hills">
-              <ImageWidget locName="Painted Hills" ></ImageWidget>
+              <ImageWidget locName="Painted Hills" style="width: 18rem; height: 13rem;"></ImageWidget>
               <div class="card-body">
                 <p class="card-text">Painted Hills</p>
               </div>
@@ -48,7 +48,7 @@
         <li class="flex-item">
           <div class="card" style="width: 18rem">
             <router-link class="homelink" to="/location/Oregon Coast">
-              <ImageWidget locName="Oregon Coast" ></ImageWidget>
+              <ImageWidget locName="Oregon Coast" style="width: 18rem; height: 13rem;"></ImageWidget>
               <div class="card-body">
                 <p class="card-text">Oregon Coast</p>
               </div>
@@ -60,7 +60,7 @@
         <li class="flex-item">
           <div class="card" style="width: 18rem">
             <router-link class="homelink" to="/location/Smith Rock">
-              <ImageWidget locName="Smith Rock" ></ImageWidget>
+              <ImageWidget locName="Smith Rock" style="width: 18rem; height: 13rem;" ></ImageWidget>
               <div class="card-body">
                 <p class="card-text">Smith Rock</p>
               </div>
@@ -70,7 +70,7 @@
         <li class="flex-item">
           <div class="card" style="width: 18rem">
             <router-link class="homelink" to="/location/The Wallowas">
-              <ImageWidget locName="The Wallowas" ></ImageWidget>
+              <ImageWidget locName="The Wallowas" style="width: 18rem; height: 13rem;"></ImageWidget>
               <div class="card-body">
                 <p class="card-text">The Wallowas</p>
               </div>
@@ -80,7 +80,7 @@
         <li class="flex-item">
           <div class="card" style="width: 18rem">
             <router-link class="homelink" to="/location/Mt. Hood">
-              <ImageWidget locName="Mt. Hood" ></ImageWidget>
+              <ImageWidget locName="Mt. Hood" style="width: 18rem; height: 13rem;"></ImageWidget>
               <div class="card-body">
                 <p class="card-text">Mt. Hood</p>
               </div>
