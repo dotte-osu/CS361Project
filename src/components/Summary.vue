@@ -42,7 +42,7 @@ export default {
 
       locationData.data.forEach((x) => {
         if (x.name === self.name) {
-          url = "http://localhost:3495/wikiscraper/" + x.wiki;
+          url = "https://guarded-harbor-49578.herokuapp.com/wikiscraper/" + x.wiki;
         }
       });
       console.log(url)
